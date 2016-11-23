@@ -1,0 +1,2 @@
+$("#follow_form").html("<%= escape_javascript(render('users/unfollow')) %>"); <%# escape_javascriptは、JavaScriptファイル内にHTMLを挿入するときに実行結果をエスケープする (画面に表示しない) ために必要です。%>
+$("#followers").html('<%= @user.followers.count %>');

@@ -1,0 +1,4 @@
+<%= form_for(current_user.active_relationships.build, remote: true) do |f| %>
+  <div><%= hidden_field_tag :followed_id, @user.id %></div>  <%# このフォームはfollowed_idをコントローラに送信する必要があります。これを行うために、リスト12.21のhidden_field_tagメソッドを使用 %>
+  <%= f.submit "Follow", class: "btn btn-primary" %>
+<% end %>
